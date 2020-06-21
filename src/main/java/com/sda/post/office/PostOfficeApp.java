@@ -3,6 +3,7 @@ package com.sda.post.office;
 public class PostOfficeApp {
   public static void main(String[] args) {
     System.out.println("Hello in the PostOfficeApp");
+    System.out.println("Hello in the PostOfficeApp 2");
 
     Package socks = new Package("socks");
 
