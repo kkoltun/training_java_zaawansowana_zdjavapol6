@@ -2,6 +2,8 @@ package com.sda.post.office;
 
 public class PostOfficeApp {
   public static void main(String[] args) {
+    System.out.println("Hello in the PostOfficeApp");
+
     Package socks = new Package("socks");
 
     // 1. Wyswietl wszystkie mozliwe statusy
