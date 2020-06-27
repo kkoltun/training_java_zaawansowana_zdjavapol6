@@ -1,35 +1,36 @@
 package com.sda.examples;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.*;
+
+import static java.time.LocalDate.now;
+import static java.time.Month.NOVEMBER;
 
 public class CollectionExamples {
   public static void main(String[] args) {
-    // LIST
-    List<String> textList = new ArrayList<>();
-    textList.add("ala");
-    textList.add("ma");
-    textList.add("kota");
+    Map<String, Person> people = new HashMap<>();
 
-    for (String text : textList) {
-      System.out.println(text);
+    people.put("1", new Person("Karol",
+        "Koltun",
+        now()));
+    people.put("2", new Person("Magdalena",
+        "Nowak",
+        LocalDate.of(1992, NOVEMBER, 11)));
+
+    Set<Map.Entry<String, Person>> elements = people.entrySet();
+    for (Map.Entry<String, Person> element : elements) {
+      String key = element.getKey();
+      Person value = element.getValue();
+      System.out.println("#" + key + ": " + value);
     }
 
-    // MAP
-    Map<String, String> phoneBook = new HashMap<>();
-    phoneBook.put("Karol", "1234");
-    phoneBook.put("Wiktoria", "5678");
-
-    System.out.println("Before");
-    System.out.println(phoneBook.get("Karol"));
-
-    System.out.println("After");
-    phoneBook.put("Karol", "9012");
-    System.out.println(phoneBook.get("Karol"));
-
-    // SET OF ENTRIES
-    Set<Map.Entry<String, String>> entries = phoneBook.entrySet();
-    for (Map.Entry<String, String> entry : entries) {
-      System.out.println(entry.getKey() + ": " + entry.getValue());
+    people.put("1", new Person("Adam", "Bodnar", now()));
+    elements = people.entrySet();
+    for (Map.Entry<String, Person> element : elements) {
+      String key = element.getKey();
+      Person value = element.getValue();
+      System.out.println("#" + key + ": " + value);
     }
   }
 }
