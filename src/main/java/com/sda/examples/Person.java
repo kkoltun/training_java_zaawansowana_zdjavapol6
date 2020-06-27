@@ -4,9 +4,10 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Person {
-  private String firstName;
-  private String lastName;
-  private LocalDate dateOfBirth;
+  // NOWY KOMENTARZ KTOREGO NIE BYLO WCZESNIEJ
+  private final String firstName;
+  private final String lastName;
+  private final LocalDate dateOfBirth;
 
   public Person(String firstName, String lastName, LocalDate dateOfBirth) {
     this.firstName = firstName;
