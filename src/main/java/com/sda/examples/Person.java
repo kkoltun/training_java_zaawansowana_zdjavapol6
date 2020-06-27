@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Person {
+  // NOWY KOMENTARZ KTOREGO NIE BYLO WCZESNIEJ
   private final String firstName;
   private final String lastName;
   private final LocalDate dateOfBirth;
