@@ -13,10 +13,11 @@ public class CollectionExamples {
 
     people.put("1", new Person("Karol",
         "Koltun",
-        now()));
+        now(),
+        182));
     people.put("2", new Person("Magdalena",
         "Nowak",
-        LocalDate.of(1992, NOVEMBER, 11)));
+        LocalDate.of(1992, NOVEMBER, 11), 181));
 
     Set<Map.Entry<String, Person>> elements = people.entrySet();
     for (Map.Entry<String, Person> element : elements) {
@@ -25,7 +26,7 @@ public class CollectionExamples {
       System.out.println("#" + key + ": " + value);
     }
 
-    people.put("1", new Person("Adam", "Bodnar", now()));
+    people.put("1", new Person("Adam", "Bodnar", now(), 178));
     elements = people.entrySet();
     for (Map.Entry<String, Person> element : elements) {
       String key = element.getKey();
