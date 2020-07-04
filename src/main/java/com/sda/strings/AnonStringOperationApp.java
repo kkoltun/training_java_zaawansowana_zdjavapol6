@@ -15,6 +15,7 @@ public class AnonStringOperationApp {
 
     StringOperation modifyText = new StringOperation() {
       private static final String TEXT = "Modified: ";
+
       @Override
       public String modify(String text) {
         return TEXT + text;
